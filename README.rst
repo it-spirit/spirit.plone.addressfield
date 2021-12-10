@@ -2,15 +2,15 @@
    If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
    This text does not appear on pypi or github. It is a comment.
 
-.. image:: https://github.com/collective/spirit.plone.addressfield/actions/workflows/plone-package.yml/badge.svg
-    :target: https://github.com/collective/spirit.plone.addressfield/actions/workflows/plone-package.yml
+.. image:: https://github.com/it-spirit/spirit.plone.addressfield/actions/workflows/plone-package.yml/badge.svg
+    :target: https://github.com/it-spirit/spirit.plone.addressfield/actions/workflows/plone-package.yml
 
-.. image:: https://coveralls.io/repos/github/collective/spirit.plone.addressfield/badge.svg?branch=main
-    :target: https://coveralls.io/github/collective/spirit.plone.addressfield?branch=main
+.. image:: https://coveralls.io/repos/github/it-spirit/spirit.plone.addressfield/badge.svg?branch=main
+    :target: https://coveralls.io/github/it-spirit/spirit.plone.addressfield?branch=main
     :alt: Coveralls
 
-.. image:: https://codecov.io/gh/collective/spirit.plone.addressfield/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/collective/spirit.plone.addressfield
+.. image:: https://codecov.io/gh/it-spirit/spirit.plone.addressfield/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/it-spirit/spirit.plone.addressfield
 
 .. image:: https://img.shields.io/pypi/v/spirit.plone.addressfield.svg
     :target: https://pypi.python.org/pypi/spirit.plone.addressfield/
@@ -93,9 +93,8 @@ Put your name here, you deserve it!
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/spirit.plone.addressfield/issues
-- Source Code: https://github.com/collective/spirit.plone.addressfield
-- Documentation: https://docs.plone.org/foo/bar
+- Issue Tracker: https://github.com/it-spirit/spirit.plone.addressfield/issues
+- Source Code: https://github.com/it-spirit/spirit.plone.addressfield
 
 
 Support
