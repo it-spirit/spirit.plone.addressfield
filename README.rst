@@ -5,7 +5,7 @@
 .. image:: https://github.com/it-spirit/spirit.plone.addressfield/actions/workflows/plone-package.yml/badge.svg
     :target: https://github.com/it-spirit/spirit.plone.addressfield/actions/workflows/plone-package.yml
 
-.. image:: https://codecov.io/gh/it-spirit/spirit.plone.addressfield/branch/master/graph/badge.svg
+.. image:: https://codecov.io/gh/it-spirit/spirit.plone.addressfield/branch/main/graph/badge.svg?token=FENI5FS88W
     :target: https://codecov.io/gh/it-spirit/spirit.plone.addressfield
 
 .. image:: https://img.shields.io/pypi/v/spirit.plone.addressfield.svg
