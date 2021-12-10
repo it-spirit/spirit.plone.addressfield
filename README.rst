@@ -5,10 +5,6 @@
 .. image:: https://github.com/it-spirit/spirit.plone.addressfield/actions/workflows/plone-package.yml/badge.svg
     :target: https://github.com/it-spirit/spirit.plone.addressfield/actions/workflows/plone-package.yml
 
-.. image:: https://coveralls.io/repos/github/it-spirit/spirit.plone.addressfield/badge.svg?branch=main
-    :target: https://coveralls.io/github/it-spirit/spirit.plone.addressfield?branch=main
-    :alt: Coveralls
-
 .. image:: https://codecov.io/gh/it-spirit/spirit.plone.addressfield/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/it-spirit/spirit.plone.addressfield
 
