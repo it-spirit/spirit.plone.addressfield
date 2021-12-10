@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="spirit.plone.addressfield">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="spirit.plone.addressfield.interfaces.ISpiritPloneAddressfieldLayer"
+      />
+
+  <!-- Publish static files -->
+  <plone:static
+      name="spirit.plone.addressfield"
+      type="plone"
+      directory="static"
+      />
+
+</configure>
