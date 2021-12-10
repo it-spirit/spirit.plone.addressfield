@@ -21,8 +21,6 @@ jobs:
               python-version: [3.7, 3.8, 3.9]
               exclude:
                 - plone-version: 'Plone52'
-                  python-version: 3.8
-                - plone-version: 'Plone52'
                   python-version: 3.9
                 - plone-version: 'Plone60'
                   python-version: 3.7
@@ -79,10 +77,10 @@ jobs:
 
             - name: Coverage report on python3.7
               run: tox -r -e coverage-report
-              if: ${{matrix.python-version == '3.7' && matrix.plone-version == 'Plone52'}}
+              if: ${{matrix.python-version == '3.7'}}
 
             - name: "Upload coverage to Codecov"
               uses: "codecov/codecov-action@v1"
               with:
                 fail_ci_if_error: true
-              if: ${{matrix.python-version == '3.7' && matrix.plone-version == 'Plone52'}}
+              if: ${{matrix.python-version == '3.7'}}
