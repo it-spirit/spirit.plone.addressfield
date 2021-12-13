@@ -16,8 +16,6 @@
   <!--<includeDependencies package="." />-->
   <include package="gocept.country" />
 
-  <include package=".browser" />
-
   <include file="permissions.zcml" />
 
   <genericsetup:registerProfile
