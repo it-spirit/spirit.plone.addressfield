@@ -1,0 +1,28 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="spirit.plone.addressfield">
+
+  <!-- Behavior registration if plone.behavior is available. -->
+  <configure zcml:condition="installed plone.behavior"
+      xmlns:plone="http://namespaces.plone.org/plone">
+
+    <include package="plone.behavior" file="meta.zcml" />
+
+    <plone:behavior
+        description="Add address information to content items."
+        name="addressbehavior"
+        title="Address Behavior"
+        provides=".behavior.IAddressBehavior"
+        />
+  </configure>
+
+  <!-- Supermodel registration if plone.supermodel is available. -->
+  <utility
+      zcml:condition="installed plone.supermodel"
+      component=".supermodel.AddressFieldHandler"
+      name="spirit.plone.addressfield.field.AddressField"
+      />
+
+</configure>
