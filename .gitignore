@@ -1,4 +1,6 @@
 .coverage
+.coverage.*
+coverage.xml
 *.egg-info
 *.log
 *.mo
