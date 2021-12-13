@@ -2,41 +2,41 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       i18n:domain="spirit.plone.address"
       tal:omit-tag="">
-  <div class="address_wrapper" style="padding: 1rem 2rem">
-    <div class="form-group">
+  <div class="address_wrapper form-control px-4 py-2">
+    <div class="form-group mb-3">
       <label for="" tal:attributes="for view/id_input_address" i18n:translate="address_label_address">Address</label>
-      <input class="" id="" name="" type="text" value=""
-          tal:attributes="class string:${view/klass} latitude;
+      <input class="form-control" id="" name="" type="text" value=""
+          tal:attributes="class string:form-control ${view/klass};
                           id view/id_input_address;
                           name string:${view/name}:tuple;
                           style view/style;
                           value python:view.value[0]" />
     </div>
 
-    <div class="form-group">
+    <div class="form-group mb-3">
       <label for="" tal:attributes="for view/id_input_postcode" i18n:translate="address_label_postcode">Postcode</label>
-      <input class="" id="" name="" type="text" value=""
-          tal:attributes="class string:${view/klass} latitude;
+      <input class="form-control" id="" name="" type="text" value=""
+          tal:attributes="class string:form-control ${view/klass};
                           id view/id_input_postcode;
                           name string:${view/name}:tuple;
                           style view/style;
                           value python:view.value[1]" />
     </div>
 
-    <div class="form-group">
+    <div class="form-group mb-3">
       <label for="" tal:attributes="for view/id_input_place" i18n:translate="address_label_place">Place</label>
-      <input class="" id="" name="" type="text" value=""
-          tal:attributes="class string:${view/klass} latitude;
+      <input class="form-control" id="" name="" type="text" value=""
+          tal:attributes="class string:form-control ${view/klass};
                           id view/id_input_place;
                           name string:${view/name}:tuple;
                           style view/style;
                           value python:view.value[2]" />
     </div>
 
-    <div class="form-group">
+    <div class="form-group mb-3">
       <label for="" tal:attributes="for view/id_input_region" i18n:translate="address_label_region">Region</label>
-      <input class="" id="" name="" type="text" value=""
-          tal:attributes="class string:${view/klass} latitude;
+      <input class="form-control" id="" name="" type="text" value=""
+          tal:attributes="class string:form-control ${view/klass};
                           id view/id_input_region;
                           name string:${view/name}:tuple;
                           style view/style;
