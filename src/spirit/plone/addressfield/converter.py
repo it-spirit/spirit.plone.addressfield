@@ -14,7 +14,13 @@ class AddressConverter(BaseDataConverter):
 
     def toWidgetValue(self, value):
         if value:
-            return (value.address, value.postcode, value.place, value.region, value.country)
+            return (
+                value.address,
+                value.postcode,
+                value.place,
+                value.region,
+                value.country,
+            )
 
     def toFieldValue(self, value):
         if value is None:

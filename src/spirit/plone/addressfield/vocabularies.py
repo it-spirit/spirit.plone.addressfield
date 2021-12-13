@@ -4,7 +4,6 @@
 from gocept.country.db import Country
 from operator import itemgetter
 from plone import api
-from spirit.plone.addressfield import _
 from zope.globalrequest import getRequest
 from zope.i18n import translate
 from zope.interface import implementer
