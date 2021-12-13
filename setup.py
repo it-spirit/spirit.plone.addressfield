@@ -48,6 +48,7 @@ setup(
     install_requires=[
         "setuptools",
         # -*- Extra requirements: -*-
+        "gocept.country",
         "plone.api>=1.8.4",
         "plone.app.dexterity",
     ],
