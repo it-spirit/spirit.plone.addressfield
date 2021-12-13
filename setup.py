@@ -15,10 +15,8 @@ long_description = "\n\n".join(
 
 
 setup(
-    name="spirit.plone.addressfield",
-    version="0.1.0.dev0",
-    description="A field to manage addresses.",
-    long_description=long_description,
+    author="Thomas Massmann",
+    author_email="thomas.massmann@it-spir.it",
     # Get more from https://pypi.org/classifiers/
     classifiers=[
         "Environment :: Web Environment",
@@ -33,44 +31,40 @@ setup(
         "Operating System :: OS Independent",
         "License :: OSI Approved :: GNU General Public License v2 (GPLv2)",
     ],
+    description="A field to manage addresses.",
+    entry_points="""
+    [z3c.autoinclude.plugin]
+    target = plone
+    """,
+    extras_require={
+        "test": [
+            "plone.app.contenttypes",
+            "plone.app.robotframework[debug]",
+            "plone.app.testing",
+            "plone.testing>=5.0.0",
+        ],
+    },
+    include_package_data=True,
+    install_requires=[
+        "setuptools",
+        # -*- Extra requirements: -*-
+        "plone.api>=1.8.4",
+        "plone.app.dexterity",
+    ],
     keywords="Python Plone CMS",
-    author="Thomas Massmann",
-    author_email="thomas.massmann@it-spir.it",
-    url="https://github.com/it-spirit/spirit.plone.addressfield",
+    license="GPL version 2",
+    long_description=long_description,
+    name="spirit.plone.addressfield",
+    namespace_packages=["spirit", "spirit.plone"],
+    package_dir={"": "src"},
+    packages=find_packages("src", exclude=["ez_setup"]),
     project_urls={
         "PyPI": "https://pypi.python.org/pypi/spirit.plone.addressfield",
         "Source": "https://github.com/it-spirit/spirit.plone.addressfield",
         "Tracker": "https://github.com/it-spirit/spirit.plone.addressfield/issues",
     },
-    license="GPL version 2",
-    packages=find_packages("src", exclude=["ez_setup"]),
-    namespace_packages=["spirit", "spirit.plone"],
-    package_dir={"": "src"},
-    include_package_data=True,
-    zip_safe=False,
     python_requires=">=3.7",
-    install_requires=[
-        "setuptools",
-        # -*- Extra requirements: -*-
-        "z3c.jbot",
-        "plone.api>=1.8.4",
-        "plone.app.dexterity",
-    ],
-    extras_require={
-        "test": [
-            "plone.app.testing",
-            # Plone KGS does not use this version, because it would break
-            # Remove if your package shall be part of coredev.
-            # plone_coredev tests as of 2016-04-01.
-            "plone.testing>=5.0.0",
-            "plone.app.contenttypes",
-            "plone.app.robotframework[debug]",
-        ],
-    },
-    entry_points="""
-    [z3c.autoinclude.plugin]
-    target = plone
-    [console_scripts]
-    update_locale = spirit.plone.addressfield.locales.update:update_locale
-    """,
+    url="https://github.com/it-spirit/spirit.plone.addressfield",
+    version="0.1.0.dev0",
+    zip_safe=False,
 )
