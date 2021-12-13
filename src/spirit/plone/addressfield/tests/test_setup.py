@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 """Setup tests for this package."""
+from plone import api
+from plone.app.testing import setRoles
+from plone.app.testing import TEST_USER_ID
+from plone.browserlayer import utils
+from spirit.plone.addressfield.interfaces import ISpiritPloneAddressfieldLayer
+from spirit.plone.addressfield.testing import INTEGRATION_TESTING
+
 import unittest
 
-from plone import api
-from plone.app.testing import TEST_USER_ID, setRoles
-
-from spirit.plone.addressfield.testing import (  # noqa: E501
-    SPIRIT_PLONE_ADDRESSFIELD_INTEGRATION_TESTING,
-)
 
 try:
     from Products.CMFPlone.utils import get_installer
@@ -18,7 +19,7 @@ except ImportError:
 class TestSetup(unittest.TestCase):
     """Test that spirit.plone.addressfield is properly installed."""
 
-    layer = SPIRIT_PLONE_ADDRESSFIELD_INTEGRATION_TESTING
+    layer = INTEGRATION_TESTING
 
     def setUp(self):
         """Custom shared utility setup for tests."""
@@ -36,16 +37,12 @@ class TestSetup(unittest.TestCase):
 
     def test_browserlayer(self):
         """Test that ISpiritPloneAddressfieldLayer is registered."""
-        from plone.browserlayer import utils
-
-        from spirit.plone.addressfield.interfaces import ISpiritPloneAddressfieldLayer
-
         self.assertIn(ISpiritPloneAddressfieldLayer, utils.registered_layers())
 
 
 class TestUninstall(unittest.TestCase):
 
-    layer = SPIRIT_PLONE_ADDRESSFIELD_INTEGRATION_TESTING
+    layer = INTEGRATION_TESTING
 
     def setUp(self):
         self.portal = self.layer["portal"]
@@ -66,8 +63,4 @@ class TestUninstall(unittest.TestCase):
 
     def test_browserlayer_removed(self):
         """Test that ISpiritPloneAddressfieldLayer is removed."""
-        from plone.browserlayer import utils
-
-        from spirit.plone.addressfield.interfaces import ISpiritPloneAddressfieldLayer
-
         self.assertNotIn(ISpiritPloneAddressfieldLayer, utils.registered_layers())
