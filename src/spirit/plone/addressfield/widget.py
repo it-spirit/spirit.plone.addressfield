@@ -10,7 +10,6 @@ from z3c.form.interfaces import NO_VALUE
 from z3c.form.widget import FieldWidget
 from zope.component import adapter
 from zope.interface import implementer
-from zope.interface import implementer
 from zope.schema import getFieldNames
 
 
@@ -23,7 +22,6 @@ class AddressWidget(ObjectWidget):
     def value(self):
         """This invokes updateWidgets on any value change e.g. update/extract."""
         return super(AddressWidget, self).value
-
 
     @value.setter
     def value(self, value):
