@@ -1,26 +1,28 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "POT-Creation-Date: 2021-12-15 19:29+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-12-15 14:31-0500\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+"Last-Translator: Thomas Massmann <thomas.massmann@it-spir.it>\n"
+"Language-Team: \n"
+"Language: de\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: spirit/plone/addressfield/plone.zcml:18
 msgid "Add address information to content items."
-msgstr ""
+msgstr "Adressdaten für Inhaltstypen."
 
 #: spirit/plone/addressfield/plone.zcml:18
 msgid "Address Behavior"
-msgstr ""
+msgstr "Adressdaten"
 
 #: spirit/plone/addressfield/configure.zcml:30
 msgid "Installs the spirit.plone.addressfield add-on."
@@ -33,27 +35,27 @@ msgstr ""
 #. Default: "Address"
 #: spirit/plone/addressfield/behavior.py:29
 msgid "address_behavior_label_address"
-msgstr ""
+msgstr "Adressdaten"
 
 #. Default: "Address"
 #: spirit/plone/addressfield/interfaces.py:27
 msgid "address_label_address"
-msgstr ""
+msgstr "Adresse"
 
 #. Default: "Country"
 #: spirit/plone/addressfield/interfaces.py:65
 msgid "address_label_country"
-msgstr ""
+msgstr "Land"
 
 #. Default: "City"
 #: spirit/plone/addressfield/interfaces.py:43
 msgid "address_label_place"
-msgstr ""
+msgstr "Ort"
 
 #. Default: "Postcode"
 #: spirit/plone/addressfield/interfaces.py:35
 msgid "address_label_postcode"
-msgstr ""
+msgstr "Postleitzahl"
 
 #: spirit/plone/addressfield/configure.zcml:30
 msgid "spirit.plone.addressfield"
