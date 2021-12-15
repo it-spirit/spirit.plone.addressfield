@@ -45,7 +45,7 @@
 
   <!-- -*- extra stuff goes here -*- -->
   <adapter factory=".widget.AddressFieldWidget" />
-  <adapter factory=".converter.AddressConverter" />
+
 
   <z3c:widgetTemplate
       layer="z3c.form.interfaces.IFormLayer"
@@ -54,12 +54,6 @@
       widget=".interfaces.IAddressWidget"
       />
 
-  <z3c:widgetTemplate
-      layer="z3c.form.interfaces.IFormLayer"
-      mode="input"
-      template="address_input.pt"
-      widget=".interfaces.IAddressWidget"
-      />
 
   <utility
       component=".vocabularies.AvailableCountriesVocabularyFactory"

@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """Module where all interfaces, events and exceptions live."""
 
+from plone.app.z3cform.widget import SelectFieldWidget
+from plone.autoform import directives
+from plone.supermodel import model
 from spirit.plone.addressfield import _
-from z3c.form.interfaces import IWidget
+from z3c.form.interfaces import IObjectWidget
 from zope import schema
 from zope.interface import Interface
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
@@ -17,7 +20,7 @@ class IAddressField(IObject):
     pass
 
 
-class IAddress(Interface):
+class IAddress(model.Schema):
     """Schema for addresses."""
 
     address = schema.TextLine(
@@ -44,14 +47,19 @@ class IAddress(Interface):
         ),
     )
 
-    region = schema.TextLine(
-        required=False,
-        title=_(
-            "address_label_region",
-            default="Region",
-        ),
-    )
+    # region = schema.TextLine(
+    #     readonly=True,
+    #     required=False,
+    #     title=_(
+    #         "address_label_region",
+    #         default="Region",
+    #     ),
+    # )
 
+    directives.widget(
+        "country",
+        SelectFieldWidget,
+    )
     country = schema.Choice(
         default="DE",
         required=False,
@@ -63,5 +71,5 @@ class IAddress(Interface):
     )
 
 
-class IAddressWidget(IWidget):
+class IAddressWidget(IObjectWidget):
     pass

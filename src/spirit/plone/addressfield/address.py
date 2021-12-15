@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from spirit.plone.addressfield.interfaces import IAddress
+from z3c.form.object import registerFactoryAdapter
 from zope.interface import implementer
 
 
@@ -16,3 +17,6 @@ class Address(object):
         self.place = place
         self.region = region
         self.country = country
+
+
+registerFactoryAdapter(IAddress, Address)
