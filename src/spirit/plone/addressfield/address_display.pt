@@ -2,29 +2,11 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       i18n:domain="spirit.plone.address"
       tal:omit-tag="">
-  <div class="address_wrapper"
-      tal:define="value view/value | nothing"
-      tal:condition="value">
+  <div tal:attributes="class view/klass">
     <dl>
-      <div tal:define="field python: value[0]" tal:condition="field">
-        <dt i18n:translate="address_label_address">Address</dt>
-        <dd tal:content="field">[Value]</dd>
-      </div>
-      <div tal:define="field python: value[1]" tal:condition="field">
-        <dt i18n:translate="address_label_postcode">Postcode</dt>
-        <dd tal:content="field">[Value]</dd>
-      </div>
-      <div tal:define="field python: value[2]" tal:condition="field">
-        <dt i18n:translate="address_label_place">Place</dt>
-        <dd tal:content="field">[Value]</dd>
-      </div>
-      <div tal:define="field python: value[3]" tal:condition="field">
-        <dt i18n:translate="address_label_region">Region</dt>
-        <dd tal:content="field">[Value]</dd>
-      </div>
-      <div tal:define="field python: value[4]" tal:condition="field">
-        <dt i18n:translate="address_label_country">Country</dt>
-        <dd tal:content="field">[Value]</dd>
+      <div tal:repeat="widget view/subform/widgets/values">
+        <dt tal:content="widget/label">label</dt>
+        <dd tal:content="structure widget/render"></dd>
       </div>
     </dl>
   </div>
