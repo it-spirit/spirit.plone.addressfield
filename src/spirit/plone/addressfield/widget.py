@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from plone.supermodel import model
 from spirit.plone.addressfield.interfaces import IAddressField
 from spirit.plone.addressfield.interfaces import IAddressWidget
 from z3c.form.browser.object import ObjectWidget

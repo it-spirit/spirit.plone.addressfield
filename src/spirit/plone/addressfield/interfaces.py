@@ -7,7 +7,6 @@ from plone.supermodel import model
 from spirit.plone.addressfield import _
 from z3c.form.interfaces import IObjectWidget
 from zope import schema
-from zope.interface import Interface
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 from zope.schema.interfaces import IObject
 
